@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Flipper</title>
+  <!-- Adding normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Adding Bootstrap min -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+  crossorigin="anonymous">
+  <!-- Adding my own styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container main">
+    <h1 class="title">
+      <img class='image'src="img/image.svg" alt="Main image">
+      Let`s find a good ideas for your design
+    </h1>
+    <p class="subtitle">
+      I created this project because sometimes I can't think of an interesting color combination.
+      Here you can press buttons that color elements in random colors.
+      I've also added the ability to enter the RGB values you want to use
+    </p>
+  </div>
+  
+  <div class="container interactive" id="container">
+    <div class="interactive__stage">
+      <h2 id="header" class="header header-start">Just click to 'Start'</h2>
+      <button class="start-button">Start</button>
+    </div>
+    <div class="accordion">
+      <div class="stage">
+        <h3 id="header" class="header"> Click the button to change the background color</h3>
+        <button id="button" class="button">Click</button>
+      </div>
+      <div class="stage">
+        <h3 id="header" class="header"> You also can change the boxshadow color</h3>
+        <button class="button button-shadow">Click</button>
+      </div>
+      <div class="stage">
+        <h3 id="header" class="header"> Do you want to change this container color ? Ok</h3>
+        <button class="button button-container">Click</button>
+      </div>
+      <div class="stage stage__form">
+        <h3 class="header"> If you have a color, maybe just put it in below </h3>
+        <p class="warning">(Click the delete button to clear the form)</p>
+        <form class="form" action="#">
+          <div class="form__inputs">
+            <input class="form__background form__input" type="text" placeholder="Background color">
+            <input class="form__boxshadow form__input" type="text" placeholder="Box Shadow">
+            <input class="form__container form__input" type="text" placeholder="Container">
+          </div>
+          <button class="button__form" type="submit">Put</button>
+          <button class="delete__button" type="button">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container examples">
+    <h2 class="examples__title title">Here are some examples of color combinations</h2>
+    <ul class="examples__list row">
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-1"></div>
+          <div class="examples__section section-2"></div>
+        </div>
+        <h4 class="examples__name">Charcoal & yellow</h4>
+        <p class="examples__text">A classic common combination<br>Hex codes: Charcoal #101820, Yellow #FEE715</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-3"></div>
+          <div class="examples__section section-4"></div>
+        </div>
+        <h4 class="examples__name">Lavender & teal</h4>
+        <p class="examples__text">Great color combination<br>Hex codes: Lavender #E2D1F9, Teal #317773</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-5"></div>
+          <div class="examples__section section-6"></div>
+        </div>
+        <h4 class="examples__name">Baby blue & white</h4>
+        <p class="examples__text">A very light and harmonious blend, ideal for use in the healthcare industry<br>Hex codes: Baby Blue #8AAAE5, White #FFFFFF</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-7"></div>
+          <div class="examples__section section-8"></div>
+        </div>
+        <h4 class="examples__name">Hot pink & cyan</h4>
+        <p class="examples__text">Perfect for an alternative approach to more playful brands<br>Hex codes: Hot Pink #FF69B4, Neon Blue #00FFFF</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-9"></div>
+          <div class="examples__section section-10"></div>
+        </div>
+        <h4 class="examples__name">Light blue & dark blue</h4>
+        <p class="examples__text">This pair inspires professionalism and confidence, fit for the banks.<br>Hex codes: Light Blue #ADD8E6, Dark Blue #00008B</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-11"></div>
+          <div class="examples__section section-12"></div>
+        </div>
+        <h4 class="examples__name">Sky blue & bubblegum pink</h4>
+        <p class="examples__text">It's perfect for children's fashion, merchandise and toys<br>Hex codes: Sky Blue #89ABE3, Bubblegum Pink #EA738D</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-13"></div>
+          <div class="examples__section section-14"></div>
+        </div>
+        <h4 class="examples__name">Peach & burnt orange</h4>
+        <p class="examples__text">Perfect for brands specializing in lifestyle, events or interior design<br>Hex codes: Peach #FCEDDA, Burnt Orange #EE4E34</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-15"></div>
+          <div class="examples__section section-16"></div>
+        </div>
+        <h4 class="examples__name">Cherry red & off-white</h4>
+        <p class="examples__text">Cherry red and off-white are versatile colors<br>Hex codes: Cherry Red #990011, Off-White #FCF6F5</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-17"></div>
+          <div class="examples__section section-18"></div>
+        </div>
+        <h4 class="examples__name">Lime green & electric blue</h4>
+        <p class="examples__text">These colors are particularly well suited for logos and in apparel design<br>Hex codes: Lime Green #CCF381, Electric Blue #4831D4</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-19"></div>
+          <div class="examples__section section-20"></div>
+        </div>
+        <h4 class="examples__name">Red & yellow</h4>
+        <p class="examples__text">This complementary color combination is the epitome of cheerfulness<br>Hex codes: Coral #F96167, Yellow #F9E795</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-21"></div>
+          <div class="examples__section section-22"></div>
+        </div>
+        <h4 class="examples__name">Blue & pink</h4>
+        <p class="examples__text">Combining blue and pink creates a nice balance<br>Hex codes: Blue #2F3C7E, Pink #FBEAEB</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-23"></div>
+          <div class="examples__section section-24"></div>
+        </div>
+        <h4 class="examples__name">Royal blue & peach</h4>
+        <p class="examples__text">Это сочетание идеально подходит для дизайна логотипа<br>Hex codes: Royal Blue #00539C, Peach #EEA47F</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-25"></div>
+          <div class="examples__section section-26"></div>
+        </div>
+        <h4 class="examples__name">Cherry red & bubblegum pink</h4>
+        <p class="examples__text">Сolors are great for product or logo design<br>Hex codes: Cherry Red #CC313D, Bubblegum Pink #F7C5CC</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-27"></div>
+          <div class="examples__section section-28"></div>
+        </div>
+        <h4 class="examples__name">Forest green & moss green</h4>
+        <p class="examples__text">Ideal for sustainable non-profit organizations, cooperatives and start-ups<br>Hex codes: Forest Green #2C5F2D, Moss Green #97BC62</p>
+      </li>
+      <li class="examples__item col-lg-4">
+        <div class="examples__inner">
+          <div class="examples__section section-29"></div>
+          <div class="examples__section section-30"></div>
+        </div>
+        <h4 class="examples__name">Island green & white</h4>
+        <p class="examples__text">They are good background colors for more holistic, minimalist or natural brands<br>Hex codes: Island Green #2BAE66, White #FCF6F5</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container facts">
+    <h2 class="facts__title title">
+      Some interesting facts about color
+    </h2>
+    <ul class="facts__list">
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          All colors are the reproduction of our brain
+        </h3>
+        <p class="fact__text">
+          Brightness, contrast and color are all the work of our brain. Without it, our lives would be gray and probably not as interesting.
+          What would our apartments be like,
+          how brightly would the lamps burn and how would we perceive our surroundings if our brain did not create our tastes and preferences
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          Red color is seen differently by men and women
+        </h3>
+        <p class="fact__text">
+          American scientists have determined that the gene that is responsible for the red color is located in the X chromosome.
+          As you know, men have only one,
+          but women have a couple of them. So do not get angry at your friend if he is not very recognizes all the shades of red
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          Metallic is the safest color
+        </h3>
+        <p class="fact__text">
+          When choosing a car, a woman, of course, will dream of a bright car and the most diverse colors. A man tends to black, white, gray shades. 
+          But did you know that for your safety the best will be silver. This color is best seen in overcast weather and dusk. 
+          But you should not forget about other safety factors. 
+          This is just one of many factors that scientists in New Zealand have researched
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          The color pink protects against stress
+        </h3>
+        <p class="fact__text">
+          If you want to stay balanced and worry less, use pink wherever it is appropriate. 
+          From interiors to your closet, boldly combine it with other shades. 
+          In 2015, pink cool shade is on trend for the most luxurious interiors.
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          Blue is Earthlings' favorite color
+        </h3>
+        <p class="fact__text">
+          This is not a fiction, but the bare facts. It turns out that 40% of the total population - 17 countries of the world consider blue to be one of the most favorite colors. 
+          It is followed by purple, which was chosen by 14%. But the most disliked was named - white.
+          Although white is considered the best color for dishes in restaurants. Only on a white plate any food looks unusually appetizing.
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          Cosmic coffee with milk
+        </h3>
+        <p class="fact__text">
+          This color is recognized by scientists as the color of our planet. 
+          It was obtained by averaging the colors of 200,000 galaxies. 
+          So it turned out that our earth has the color of coffee with milk.
+        </p>
+      </li>
+      <li class="facts__item fact">
+        <h3 class="fact__title">
+          <img class="fact__img" src="img/wheel.png" alt="Color Wheel">
+          Newton's color wheel is the best way to navigate colors
+        </h3>
+        <p class="fact__text">
+          It's great for mixing colors. Invented as early as Isaac Newton and supplemented by other experts, 
+          it is considered the basis of the traditional color wheel.
+          The primary colors are red, yellow, and blue.
+          Secondary colors are green, orange and violet. They are obtained by mixing primary colors.
+          Secondary colors - which are obtained by mixing primary and secondary colors. This is how you get blue-green, yellow-orange, etc.
+          How best to mix colors to get harmony shows this color wheel. 
+          Knowing it is the basis of drawing, decorating, designing and creating everything that pleases you
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <script defet src="script.js"></script>
+</body>
+</html>
